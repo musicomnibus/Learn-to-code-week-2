@@ -20,10 +20,12 @@
 
     var compare = function(userChoice, computerChoice) {
         if (userChoice  === computerChoice) {
-              window.alert("The result is a tie!");
+              document.getElementById("textBox").textContent="The result is a tie!";
+              document.getElementById("winImage").src ="https://upload.wikimedia.org/wikipedia/en/e/e9/Holy_Cross_Tie.gif";
           } else if(userChoice ==="rock") {
             if (computerChoice==="scissors") {
-                window.alert(userName + " wins!");
+              document.getElementById("textBox").textContent="The result is a tie!";
+              document.getElementById("winImage").src ="http://i.imgur.com/KSGHCUs.gif";
           } else {
                 window.alert("Paper wins");
               }
@@ -48,8 +50,10 @@
   </head>
   <body>
     <div class="wrapper">
-      <button class="button" onclick="compare(userChoice, computerChoice);">LETS PLAY RPS!</button>
+      <button class="button" onclick="compare(userChoice, computerChoice);">Did you win!</button>
       <button class="button" onclick="location.reload();">Play Again?</button>
+      <h1><span id="textBox"></span>
+      <
     </div>
   </body>
 
