@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Rock, Paper, Scissors</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script>
 
@@ -24,28 +25,33 @@
               document.getElementById("winImage").src ="https://upload.wikimedia.org/wikipedia/en/e/e9/Holy_Cross_Tie.gif";
           } else if(userChoice ==="rock") {
             if (computerChoice==="scissors") {
-              document.getElementById("textBox").textContent="The result is a tie!";
+              document.getElementById("textBox").textContent= userName + "'s Rock wins to Computer's Scissors!";
               document.getElementById("winImage").src ="http://i.imgur.com/KSGHCUs.gif";
           } else {
-                window.alert("Paper wins");
+                document.getElementById("textBox").textContent="Computer's Paper Wins! " + userName + "'s Rock Loses!";
+                document.getElementById("winImage").src ="http://www.wiu.edu/academics/majors/business_and_technology/images/desktop_computer_512.png";
               }
           }
           else if(userChoice==="paper") {
              if(computerChoice ==="rock") {
-                 window.alert(userName + " wins!");
+               document.getElementById("textBox").textContent= userName + "'s Paper wins to Computer's Rock!";
+               document.getElementById("winImage").src ="http://i.imgur.com/KSGHCUs.gif";
              } else {
-                 window.alert("scissors wins!");
+               document.getElementById("textBox").textContent="Computer's Scissors Wins! " + userName + "'s Paper Loses!";
+               document.getElementById("winImage").src ="http://www.channelnomics.com/IMG/199/299199/scissors-paper-370x229.jpg";
              }
           }
 
           else if(userChoice==="scissors") {
               if (computerChoice==="rock") {
-                  window.alert("Rock wins!");
+                document.getElementById("textBox").textContent="Computer's Rock Wins! " + userName + "'s Scissors Loses!";
+                document.getElementById("winImage").src ="http://www.wiu.edu/academics/majors/business_and_technology/images/desktop_computer_512.png";
               } else {
-                  window.alert(userName + " wins");
+                document.getElementById("textBox").textContent= userName + "'s Scissors wins to Computer's Rock";
+                document.getElementById("winImage").src ="http://i.imgur.com/KSGHCUs.gif";
               }
           }
-      };
+      }
     </script>
   </head>
   <body>
@@ -53,8 +59,10 @@
       <button class="button" onclick="compare(userChoice, computerChoice);">Did you win!</button>
       <button class="button" onclick="location.reload();">Play Again?</button>
       <h1><span id="textBox"></span>
-      <
+      <div>
+        <img id="winImage" src="http://advisoranalyst.advisoranalystgr.netdna-cdn.com/wp-content/uploads/2014/05/thumb_6917_rockpaperscissors.jpg">
+      </div>
     </div>
   </body>
-
+  
 </html>
